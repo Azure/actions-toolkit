@@ -1,0 +1,32 @@
+{
+  "name": "@azure-actions/utilities",
+  "version": "0.0.1",
+  "description": "Azure actions utilities like httpclient",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azure/actions-toolkit.git"
+  },
+  "keywords": [
+    "azure",
+    "actions",
+    "toolkit",
+    "utilities"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azure/actions-toolkit/issues"
+  },
+  "homepage": "https://github.com/azure/actions-toolkit#readme",
+  "devDependencies": {
+    "@types/node": "^12.0.4"
+  },
+  "dependencies": {
+    "typed-rest-client": "1.8.1",
+    "@actions/core": "1.2.6"
+  }
+}
