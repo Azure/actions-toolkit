@@ -33,7 +33,7 @@ async function getTokenUsingCredObject(creds: string) {
     let authorityUrl: string = credsObject["activeDirectoryEndpointUrl"] || "https://login.microsoftonline.com";
     let managementEndpointUrl: string = credsObject["resourceManagerEndpointUrl"] || "https://management.azure.com/";
     if (!servicePrincipalId || !servicePrincipalKey || !tenantId || !authorityUrl) {
-        throw new Error("Not all values are present in the creds object. Ensure appId, password and tenant are supplied");
+        throw new Error("Not all values are present in the creds object. Ensure clientId, clientSecret, tenantId and activeDirectoryEndpointUrl are supplied in the provided object");
     }
     return new Promise<string>((resolve, reject) => {
         let webRequest = new WebRequest();
@@ -75,8 +75,7 @@ async function getTokenUsingCredObject(creds: string) {
 function getTokenUsingAzCLI() {
     let resultOfExec: IExecSyncResult = execSync("az", "account get-access-token --query \"accessToken\"", { silent: true } as IExecSyncOptions);
     if (resultOfExec.code != 0) {
-        console.log("##[error]Error Code: [" + resultOfExec.code + "]");
-        core.error("Login with azure/login action to fetch token")
+        core.error(`Login with azure/login action to fetch token. Error Code: ${resultOfExec.code}`)
         throw resultOfExec;
     }
     let token = resultOfExec.stdout.trim();

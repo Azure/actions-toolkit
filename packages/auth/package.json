@@ -1,7 +1,7 @@
 {
   "name": "@azure-actions/auth",
   "version": "0.0.1",
-  "description": "auth module to communicate with azure",
+  "description": "Auth module to communicate with azure",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/azure/actions-toolkit/issues"
   },
-  "homepage": "https://github.com/azure/actions-toolkit#readme",
+  "homepage": "https://github.com/azure/actions-toolkit/tree/main/packages/auth",
   "devDependencies": {
     "@types/node": "^12.0.4"
   },
