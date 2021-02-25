@@ -1,6 +1,6 @@
 {
   "name": "@azure-actions/utilities",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Azure actions utilities like httpclient",
   "main": "lib/utils.js",
   "scripts": {
@@ -28,7 +28,9 @@
   },
   "dependencies": {
     "typed-rest-client": "1.8.1",
-    "@actions/core": "1.2.6"
+    "@actions/core": "1.2.6",
+    "shelljs": "0.8.4",
+    "minimatch": "3.0.4"
   },
   "files": [
     "lib",
