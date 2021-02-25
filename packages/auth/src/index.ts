@@ -1,9 +1,10 @@
 
 import * as core from '@actions/core';
-// Replace @ds-ms/actions-utility with @azure-actions/utilities once published
-import { WebRequest, WebRequestOptions, WebResponse, sendRequest } from "@ds-ms/actions-utilities/lib/http";
-import { IExecSyncResult, execSync, IExecSyncOptions } from "@ds-ms/actions-utilities";
 import * as querystring from 'querystring';
+
+import { WebRequest, WebRequestOptions, WebResponse, sendRequest } from "@azure-actions/utilities/lib/http";
+import { IExecSyncResult, IExecSyncOptions } from "@azure-actions/utilities/lib/toolrunner";
+import { execSync } from '@azure-actions/utilities';
 
 export async function getAzureAccessToken(creds?: string): Promise<string> {
     if (!!creds) {
@@ -65,8 +66,8 @@ async function getTokenUsingCredObject(creds: string) {
                     reject('CouldNotFetchAccessTokenforAzureStatusCode');
                 }
             },
-            (error) => {
-                reject(error)
+            (error: Error) => {
+                reject(error);
             }
         );
     });
@@ -79,5 +80,5 @@ function getTokenUsingAzCLI() {
         throw resultOfExec;
     }
     let token = resultOfExec.stdout.trim();
-    return token.substring(1, token.length - 1);
+    return token.substring(1, token.length - 1); // The result of the above is enclosed in quotes, ex: '"accessToken"'. Trimming the enclosed quotes to extract the token. Alternative could be JSON.parse
 }
