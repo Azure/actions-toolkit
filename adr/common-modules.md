@@ -38,7 +38,8 @@ The cloud neutral approach for establishing traceability has been discussed here
 
 If the actions team doesn't have any plans for establishing telemetry, like we do in ADO tasks. We may have to build a new infra for publishing telemetry from our actions.
 
-
 ## Release plan
 
-Publish these node modules to npmjs registry and add snippets in the sample action.
+- Publish these node modules to npmjs registry
+- Update any of our existing actions to use these modules. First action to use these common modules: `azure/aks-set-context`
+- Add snippets in the sample action.
