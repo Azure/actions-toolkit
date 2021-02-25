@@ -29,5 +29,8 @@
   "dependencies": {
     "typed-rest-client": "1.8.1",
     "@actions/core": "1.2.6"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
