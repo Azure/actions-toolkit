@@ -1,8 +1,8 @@
 {
-  "name": "@azure-actions/utilities",
+  "name": "@azure-actions/auth",
   "version": "0.0.2",
-  "description": "Azure actions utilities like httpclient",
-  "main": "lib/utils.js",
+  "description": "Auth module to communicate with azure",
+  "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,23 +14,21 @@
   "keywords": [
     "azure",
     "actions",
-    "toolkit",
-    "utilities"
+    "authentication",
+    "auth"
   ],
   "author": "Deepak Sattiraju <ds-ms@github.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/azure/actions-toolkit/issues"
   },
-  "homepage": "https://github.com/azure/actions-toolkit/tree/main/packages/utilities",
+  "homepage": "https://github.com/azure/actions-toolkit/tree/main/packages/auth",
   "devDependencies": {
     "@types/node": "^12.0.4"
   },
   "dependencies": {
-    "typed-rest-client": "1.8.1",
-    "@actions/core": "1.2.6",
-    "shelljs": "0.8.4",
-    "minimatch": "3.0.4"
+    "@azure-actions/utilities": "0.0.2",
+    "querystring": "0.2.1"
   },
   "files": [
     "lib",
