@@ -1,7 +1,6 @@
 import util = require("util");
 import httpClient = require("typed-rest-client/HttpClient");
 import * as core from '@actions/core';
-import { sleepFor } from "./sleep";
 
 var httpCallbackClient = new httpClient.HttpClient('AZURE_ACTIONS_GITHUB_RUNNER', [], {});
 
@@ -112,4 +111,10 @@ async function toWebResponse(response: httpClient.HttpClientResponse): Promise<W
     }
 
     return res;
+}
+
+export function sleepFor(sleepDurationInSeconds: number): Promise<any> {
+    return new Promise((resolve, reject) => {
+        setTimeout(resolve, sleepDurationInSeconds * 1000);
+    });
 }
