@@ -16,6 +16,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: |
            cd packages/utilities
+           npm install
            npm run-script build
       - run: npm publish
         env:
