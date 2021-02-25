@@ -18,6 +18,6 @@ jobs:
            cd packages/utilities
            npm install
            npm run-script build
-      - run: npm publish
+           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
