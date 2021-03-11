@@ -134,7 +134,7 @@ export function mkdirP(p: string): void {
 }
 
 /**
- * Recursively finds all paths a given path. Returns an array of paths.
+ * Recursively finds all paths for a given path. Returns an array of paths.
  *
  * @param     findPath  path to search
  * @returns   string[]
