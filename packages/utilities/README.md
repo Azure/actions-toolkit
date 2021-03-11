@@ -84,7 +84,7 @@ Param | Type | Description
 p | string | path to create
 
 ### utils.find
-Recursively finds all paths a given path. Returns an array of paths.
+Recursively finds all paths for a given path. Returns an array of paths.
 
 ```javascript
 find(findPath: string): string[] {
@@ -93,6 +93,22 @@ find(findPath: string): string[] {
 Param | Type | Description
 --- | --- | ---
 find | string | path to search
+
+
+
+### utils.match
+Applies glob patterns to a list of paths. Supports interleaved exclude patterns.
+
+```javascript
+ match(list: string[], patterns: string[] | string, patternRoot?: string, options?: MatchOptions): string[]
+```
+
+Param | Type | Description
+--- | --- | ---
+list | string\[\] | array of paths
+patterns | string\[\] \| string | patterns to apply. supports interleaved exclude patterns.
+patternRoot | string | optional. default root to apply to unrooted patterns. not applied to basename\-only patterns when matchBase:true.
+options | MatchOptions | optional. defaults to \{ dot: true, nobrace: true, nocase: process.platform == 'win32' \}.
 
 
 ### utils.MatchOptions
@@ -110,20 +126,6 @@ matchBase | boolean |
 nocomment | boolean | 
 nonegate | boolean | 
 flipNegate | boolean | 
-
-### utils.match
-Applies glob patterns to a list of paths. Supports interleaved exclude patterns.
-
-```javascript
- match(list: string[], patterns: string[] | string, patternRoot?: string, options?: MatchOptions): string[]
-```
-
-Param | Type | Description
---- | --- | ---
-list | string\[\] | array of paths
-patterns | string\[\] \| string | patterns to apply. supports interleaved exclude patterns.
-patternRoot | string | optional. default root to apply to unrooted patterns. not applied to basename\-only patterns when matchBase:true.
-options | MatchOptions | optional. defaults to \{ dot: true, nobrace: true, nocase: process.platform == 'win32' \}.
 
 ### utils.execSync
 Exec a tool synchronously.  Convenience wrapper over ToolRunner to execSync with args in one call.
