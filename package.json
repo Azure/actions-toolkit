@@ -16,7 +16,7 @@
     "@types/signale": "^1.2.1",
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.0",
-    "concurrently": "^4.1.0",
+    "concurrently": "6.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-github": "^2.0.0",
     "eslint-plugin-jest": "^22.5.1",
