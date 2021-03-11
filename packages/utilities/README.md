@@ -1,8 +1,6 @@
 # @azure-actions/utilities
 
-## Usage
-
-### http module
+## HTTP module
 
 ```ts
 import {
@@ -38,7 +36,7 @@ sendRequest(webRequest, webRequestOptions).then(
 );
 ```
 
-### util functions
+## util functions
 
 ```ts
 import * as utils from '@azure-actions/utilities';
