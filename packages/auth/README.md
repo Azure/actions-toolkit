@@ -4,7 +4,7 @@
 
 ## Usage 
 
-## Import the package 
+### Import the package 
 
 ```js
 // javascript
@@ -14,7 +14,7 @@ const core = require('@azure-actions/auth');
 import * as core from '@azure-actions/auth';
 ```
 
-## getAzureAccessToken(creds?: string)
+### getAzureAccessToken(creds?: string)
 
 There are two scenarios in which you could use this.
 
@@ -31,7 +31,7 @@ let credentials = core.getInput('azure-credentials'); // SPN creds input
 let token = getAzureAccessToken(credentials);
 ```
 
-### How to fetch SPN
+## How to fetch SPN
 
 To fetch the credentials required to authenticate with Azure, run the following command:
 
