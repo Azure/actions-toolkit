@@ -1,0 +1,31 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "audit-all": "lerna run audit-moderate",
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run tsc",
+    "check-all": "concurrently \"npm:format-check\" \"npm:test\" \"npm:build -- -- --noEmit\"",
+    "format": "prettier --write packages/**/*.ts",
+    "format-check": "prettier --check packages/**/*.ts",
+    "test": "jest --testTimeout 10000"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/node": "^12.12.47",
+    "@types/signale": "^1.2.1",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "concurrently": "^4.1.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-github": "^2.0.0",
+    "eslint-plugin-jest": "^22.5.1",
+    "flow-bin": "^0.115.0",
+    "jest": "^25.1.0",
+    "jest-circus": "^24.7.1",
+    "lerna": "^3.18.4",
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.7.4"
+  }
+}
