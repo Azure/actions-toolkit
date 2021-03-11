@@ -1,5 +1,7 @@
 # @azure-actions/utilities
 
+This module contains a few helper functions which you can use in your actions to avoid rewriting some logic, like httpclient.
+
 ## HTTP module
 
 ```ts
@@ -55,8 +57,6 @@ source | string | source path
 dest | string | destination path
 options | string | string \-r, \-f or \-rf for recursive and force 
 continueOnError | boolean | optional. whether to continue on error
-retryCount | number | optional. Retry count to copy the file. It might help to resolve intermittent issues e.g. with UNC target paths on a remote host.
- 
  
 ### utils.checkShell
 
