@@ -3,9 +3,24 @@
 This repository hosts node modules to help writing your azure actions easier.
 
 The packages are:
-- [Auth](https://github.com/Azure/actions-toolkit/tree/main/packages/auth)
-- [Utilities](https://github.com/Azure/actions-toolkit/tree/main/packages/utilities)
 
+:heavy_check_mark: [@azure-actions/auth](packages/auth)
+
+Helper for authentication to communicate with Azure API. Read more [here](https://github.com/Azure/actions-toolkit/tree/main/packages/auth).
+
+```bash
+$ npm install @azure-actions/auth
+```
+<br/>
+
+📔 [@azure-actions/utilities](packages/utilities)
+
+Helper utility methods which are commonly used in Actions, like httpclient. Read more [here](https://github.com/Azure/actions-toolkit/tree/main/packages/utilities)
+
+```bash
+$ npm install @azure-actions/utilities
+```
+<br/>
 
 ## Contributing
 
