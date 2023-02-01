@@ -1,12 +1,5 @@
 # Azure actions toolkit
 
-This repository hosts node modules to help writing your azure actions easier.
-
-The packages are:
-- [Auth](https://github.com/Azure/actions-toolkit/tree/main/packages/auth)
-- [Utilities](https://github.com/Azure/actions-toolkit/tree/main/packages/utilities)
-
-
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
