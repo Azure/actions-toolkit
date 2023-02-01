@@ -7,15 +7,14 @@ jobs:
   publish-utilities-npm:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v16
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: |
            cd packages/auth
            npm install
-           npm run-script build
            npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
